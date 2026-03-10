@@ -23,6 +23,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&family=Passion+One:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 </head>
 
@@ -84,18 +85,17 @@
 
             <img class="corriendo" src="imagenes/corriendo (3).jpg" alt="corriendo">
 
-            <p>Hi, I'm Sebas! I'm a Data Scientist, graduated from Henry, with expertise in Python and SQL from my previous studies at UTN. I also really enjoy Data Analysis with Power BI and making intelligent data-driven decisions, integrating it with SQL. I'm currently working as a Python freelance developer on a project for a client who requested a cryptocurrency trading bot, developed in Python, consuming the Binance API, automating their strategies with PySide6 as a graphical interface, and integrating a system for storing operations, graphs, and calculations based on the decisions made by the bot.
-                I'm open to any full-time employment opportunity that provides financial stability to plan ahead with my family. My primary objective is to secure a position as a Data Analyst. Leveraging the robust skills and profound knowledge I acquired from the intensive Henry Bootcamp, I aim to effectively develop analytical and predictive models. My core function would be to discern patterns and trends within large datasets, consequently contributing to not only my professional growth but also the organization’s prosperity.</p>
+            <p>Hi, I’m Sebas! I’m a Data Scientist, graduated from Henry, with expertise in Python and SQL from my previous studies at UTN. I also really enjoy Data Analysis with Power BI and making intelligent data-driven decisions, integrating it with SQL.</p>
+
+            <p>I am currently <strong style="-webkit-text-fill-color: var(--accent-orange); color: var(--accent-orange);">Co-Founder &amp; CTO (Chief Technology Officer) of Bico</strong>, a company based in Colombia that specializes in data analysis and technology solutions, primarily for the logistics sector. At Bico, we build intelligent systems that create efficient and optimized routes using Machine Learning, helping businesses reduce costs, improve delivery times and make smarter operational decisions. I lead the entire technology stack — from algorithm design and ML model development to the web platform, internal tools and geospatial mapping modules.</p>
+
+            <p>I’m also working as a Python freelance developer on a cryptocurrency trading bot, developed in Python consuming the Binance API, automating strategies with PySide6 as the graphical interface, and integrating a full system for logging operations, charts and performance metrics. I’m currently developing <strong style="-webkit-text-fill-color: var(--accent-orange); color: var(--accent-orange);">Aether Bot 2.0</strong>, a new algorithmic crypto trading bot on Binance, which is in its final testing and backtesting phase. Once all legal coverage is in place, I plan to launch 5 SaaS licenses to the market.</p>
                 
                 <br>
 
             <img class="corriendo2" src="imagenes/hobby2 (2).jpg" alt="corriendo con amigo">
             
-            <p>Within my first year of employment, I commit to actively participate in no fewer than two data analysis projects. I plan to apply my analytical and technical prowess to uncover relevant insights that fuel data-driven decision-making processes. Furthermore, I am dedicated to the continuous enhancement of my technical skills, intending to participate in further training courses and acquire pertinent certifications. Staying abreast of the latest tools and methodologies in data science is a personal commitment I hold in high regard.
-            </p>
-            <br>
-
-            <p>I value the importance of working with multidisciplinary teams, as working collectively allows for the translation of complex data analysis findings into actionable recommendations beneficial to the organization.
+            <p>I am deeply committed to continuous learning and staying ahead of the latest tools and methodologies in data science and software engineering. I believe in the power of multidisciplinary teams, where diverse perspectives transform complex data findings into actionable, real-world impact — something I experience every day building Bico from the ground up.
             </p>
 
             <img class="bicicleta" src="imagenes/bici-banner (2).jpg" alt="Andando en bicicleta">
@@ -242,147 +242,214 @@
 
             <h4 class="titulo__home">Projects</h4>
 
-            <ul class="proyectos">
+            <div class="timeline">
 
-                <li>
-                    <div class="proyectos__contenido">
-                        <h2 class="proyectos__titulo">Tradding Bot</h2>
-                        <img class="img__proyectos" height="350" width="350" src="imagenes/bot.png" >
-                        <p class="proyectos__descripcion">PYTHON</p>
+                <!-- 1 - Algoritmo Bico (left) -->
+                <div class="tl-item tl-left">
+                    <div class="tl-side tl-side--media">
+                        <div class="tl-img tl-placeholder" style="background: linear-gradient(135deg, #7c3aed 0%, #2563eb 100%);">⚡</div>
                     </div>
-
-                    <div class="proyectos__enlace">
-                        <p class="proyectos__descripcion">Private repository</p>
+                    <div class="tl-connector"><div class="tl-dot"></div></div>
+                    <div class="tl-side tl-side--text">
+                        <div class="tl-card">
+                            <span class="tl-tag">Python · Algorithms</span>
+                            <h2 class="tl-title">Algoritmo Bico</h2>
+                            <p class="tl-desc">Core algorithmic engine powering the Bico platform. Handles data processing, optimization logic and automated decision-making.</p>
+                            <div class="tl-links"><span class="tl-private">Private repository</span></div>
+                        </div>
                     </div>
+                </div>
 
-                </li>
-
-                <li>
-                    <div class="proyectos__contenido">
-                        <h2 class="proyectos__titulo">Road Accidents in Bs AS</h2>
-                        <img class="img__proyectos" height="350" width="350" src="imagenes/Dashboard.png">
-                        <p class="proyectos__descripcion">PYTHON, POWER BI</p>
+                <!-- 2 - Bico Web (right) -->
+                <div class="tl-item tl-right">
+                    <div class="tl-side tl-side--text">
+                        <div class="tl-card">
+                            <span class="tl-tag">HTML5 · CSS3 · JavaScript</span>
+                            <h2 class="tl-title">Bico Web</h2>
+                            <p class="tl-desc">Official web interface for the Bico platform. Responsive design presenting the project's features, documentation and services.</p>
+                            <div class="tl-links"><span class="tl-private">Private repository</span></div>
+                        </div>
                     </div>
-
-                    <div class="proyectos__enlace">
-                        <a href="https://github.com/sebitaelgordito/PI_02_siniestros_viales"><img class="red" height="40" width="40" src="imagenes/logo-github.png" alt="logo github">
-                        </a>
-                        
+                    <div class="tl-connector"><div class="tl-dot"></div></div>
+                    <div class="tl-side tl-side--media">
+                        <div class="tl-img tl-placeholder" style="background: linear-gradient(135deg, #0891b2 0%, #0d9488 100%);">🌐</div>
                     </div>
+                </div>
 
-                </li>
-
-                <li>
-                    <div class="proyectos__contenido">
-                        <h2 class="proyectos__titulo">Final Project</h2>
-                        <img class="img__proyectos" height="350" width="350" src="imagenes/graduacion.png">
-                        <p class="proyectos__descripcion">PYTHON, POWER BI, ML, HTML5, CSS3</p>
+                <!-- 3 - Mapa Bico (left) -->
+                <div class="tl-item tl-left">
+                    <div class="tl-side tl-side--media">
+                        <div class="tl-img tl-placeholder" style="background: linear-gradient(135deg, #059669 0%, #0284c7 100%);">🗺️</div>
                     </div>
-
-                    <div class="proyectos__enlace">
-                        <a href="https://github.com/programmingwithclaudio/MVP_ML_TransporteNY"><img class="red" height="40" width="40" src="imagenes/logo-github.png" alt="logo github">
-                        </a>
-                        <a href="https://movi-plus.netlify.app"><img class="red" height="40" width="50" src="imagenes/icono-web.png" alt="logo web">
-                        </a>
+                    <div class="tl-connector"><div class="tl-dot"></div></div>
+                    <div class="tl-side tl-side--text">
+                        <div class="tl-card">
+                            <span class="tl-tag">Python · GIS · Maps</span>
+                            <h2 class="tl-title">Mapa Bico</h2>
+                            <p class="tl-desc">Interactive geospatial mapping module for the Bico ecosystem. Visualizes routes, locations and data layers using Python and GIS tools.</p>
+                            <div class="tl-links"><span class="tl-private">Private repository</span></div>
+                        </div>
                     </div>
+                </div>
 
-                </li>
-
-                <li>
-                    <div class="proyectos__contenido">
-                        <h2 class="proyectos__titulo">Calculator</h2>
-                        <img class="img__proyectos" height="350" width="350" src="imagenes/Captura-Calculadora.png" >
-                        <p class="proyectos__descripcion">HTML5, CSS3 y JAVASCRIPT.</p>
+                <!-- 4 - Aether Bot 2.0 (right) -->
+                <div class="tl-item tl-right">
+                    <div class="tl-side tl-side--text">
+                        <div class="tl-card">
+                            <span class="tl-tag">Python · Automation</span>
+                            <h2 class="tl-title">Aether Bot 2.0</h2>
+                            <p class="tl-desc">Second generation of the Aether automation bot. Enhanced capabilities, improved performance and expanded integrations over the original.</p>
+                            <div class="tl-links"><span class="tl-private">Private repository</span></div>
+                        </div>
                     </div>
-
-                    <div class="proyectos__enlace">
-                        <a href="https://github.com/SebitaElGordito/Calculadora-html5-css3-javascript"><img class="red" height="40" width="40" src="imagenes/logo-github.png" alt="logo github">
-                        </a>
-                        <a href="https://calculadora-gsvv.netlify.app"><img class="red" height="40" width="50" src="imagenes/icono-web.png" alt="logo web">
-                        </a>
+                    <div class="tl-connector"><div class="tl-dot"></div></div>
+                    <div class="tl-side tl-side--media">
+                        <div class="tl-img tl-placeholder" style="background: linear-gradient(135deg, #9333ea 0%, #db2777 100%);">🤖</div>
                     </div>
+                </div>
 
-                </li>
-
-                <li>
-                    <div class="proyectos__contenido">
-                        <h2 class="proyectos__titulo">Vegan Food Ecommerce</h2>
-                        <img class="img__proyectos" height="350" width="350" src="imagenes/Captura-Comida-pagina.png">
-                        <p class="proyectos__descripcion">HTML5, CSS3 y JAVASCRIPT.</p>
+                <!-- 5 - Trading Bot Manager (left) -->
+                <div class="tl-item tl-left">
+                    <div class="tl-side tl-side--media">
+                        <div class="tl-img tl-placeholder" style="background: linear-gradient(135deg, #1d4ed8 0%, #6d28d9 100%);">📊</div>
                     </div>
-
-                    <div class="proyectos__enlace">
-                        <a href="https://github.com/sebitaelgordito/Pagina-ordenar-comidas-html-css-javascript"><img class="red" height="40" width="40" src="imagenes/logo-github.png" alt="logo github">
-                        </a>
-                        <a href="https://saladme-sv.netlify.app"><img class="red" height="40" width="50" src="imagenes/icono-web.png" alt="logo web">
-                        </a>
+                    <div class="tl-connector"><div class="tl-dot"></div></div>
+                    <div class="tl-side tl-side--text">
+                        <div class="tl-card">
+                            <span class="tl-tag">Python · PySide6 · Binance API</span>
+                            <h2 class="tl-title">Trading Bot Manager</h2>
+                            <p class="tl-desc">Desktop GUI to manage and monitor crypto trading bots. Integrates Binance API, logs every operation and displays charts and performance metrics.</p>
+                            <div class="tl-links"><span class="tl-private">Private repository</span></div>
+                        </div>
                     </div>
+                </div>
 
-                </li>
-
-                <li>
-                    <div class="proyectos__contenido">
-                        <h2 class="proyectos__titulo">Login Form</h2>
-                        <img class="img__proyectos" height="350" width="350" src="imagenes/Captura-Formulario-login.png">
-                        <p class="proyectos__descripcion">HTML5, CSS3 y JAVASCRIPT.</p>
+                <!-- 6 - Neural-Aether Web (right) -->
+                <div class="tl-item tl-right">
+                    <div class="tl-side tl-side--text">
+                        <div class="tl-card">
+                            <span class="tl-tag">Python · ML · HTML5 · CSS3</span>
+                            <h2 class="tl-title">Neural-Aether Web</h2>
+                            <p class="tl-desc">Web front-end for the Neural-Aether AI platform. Connects machine learning models to an interactive interface built with Python and HTML5.</p>
+                            <div class="tl-links"><span class="tl-private">Private repository</span></div>
+                        </div>
                     </div>
-
-                    <div class="proyectos__enlace">
-                        <a href="https://github.com/sebitaelgordito/Formulario-login-html-css-javascript"><img class="red" height="40" width="40" src="imagenes/logo-github.png" alt="logo github">
-                        </a>
-                        <a href="https://formulario-login-sv.netlify.app"><img class="red" height="40" width="50" src="imagenes/icono-web.png" alt="logo web">
-                        </a>
+                    <div class="tl-connector"><div class="tl-dot"></div></div>
+                    <div class="tl-side tl-side--media">
+                        <div class="tl-img tl-placeholder" style="background: linear-gradient(135deg, #b45309 0%, #dc2626 100%);">🧠</div>
                     </div>
+                </div>
 
-                </li>
-
-                <li>
-                    <div class="proyectos__contenido">
-                        <h2 class="proyectos__titulo">Nike Ecommerce</h2>
-                        <img class="img__proyectos" height="350" width="350" src="imagenes/Captura-Nike-portada.png">
-                        <p class="proyectos__descripcion">HTML5, CSS3 y JAVASCRIPT.</p>
+                <!-- 7 - Trading Bot (left) -->
+                <div class="tl-item tl-left">
+                    <div class="tl-side tl-side--media">
+                        <img class="tl-img" src="imagenes/bot.png" alt="Trading Bot">
                     </div>
-
-                    <div class="proyectos__enlace">
-                        <a href="https://github.com/sebitaelgordito/Pagina-de-nike-html-css-javascript"><img class="red" height="40" width="40" src="imagenes/logo-github.png" alt="logo github">
-                        </a>
-                        <a href="https://pagina-noke-sv.netlify.app"><img class="red" height="40" width="50" src="imagenes/icono-web.png" alt="logo web">
-                        </a>
+                    <div class="tl-connector"><div class="tl-dot"></div></div>
+                    <div class="tl-side tl-side--text">
+                        <div class="tl-card">
+                            <span class="tl-tag">Python</span>
+                            <h2 class="tl-title">Trading Bot</h2>
+                            <p class="tl-desc">Cryptocurrency trading bot automating Binance strategies. PySide6 interface with full operation logging, real-time charts and performance metrics.</p>
+                            <div class="tl-links"><span class="tl-private">Private repository</span></div>
+                        </div>
                     </div>
+                </div>
 
-                </li>
-
-                <li>
-                    <div class="proyectos__contenido">
-                        <h2 class="proyectos__titulo">Python App</h2>
-                        <img class="img__proyectos" height="350" width="350" src="imagenes/Captura-App-python.png">
-                        <p class="proyectos__descripcion">Phyton</p>
+                <!-- 8 - Road Accidents (right) -->
+                <div class="tl-item tl-right">
+                    <div class="tl-side tl-side--text">
+                        <div class="tl-card">
+                            <span class="tl-tag">Python · Power BI</span>
+                            <h2 class="tl-title">Road Accidents in Bs AS</h2>
+                            <p class="tl-desc">Data analysis of road accidents in Buenos Aires. ETL pipeline in Python and an interactive Power BI dashboard with KPIs and trend analysis.</p>
+                            <div class="tl-links">
+                                <a href="https://github.com/sebitaelgordito/PI_02_siniestros_viales"><img class="tl-icon" height="36" width="36" src="imagenes/logo-github.png" alt="GitHub"></a>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="proyectos__enlace">
-                        <a href="https://github.com/sebitaelgordito/Python"><img class="red" height="40" width="40" src="imagenes/logo-github.png" alt="logo github">
-                        </a>
+                    <div class="tl-connector"><div class="tl-dot"></div></div>
+                    <div class="tl-side tl-side--media">
+                        <img class="tl-img" src="imagenes/Dashboard.png" alt="Road Accidents Dashboard">
                     </div>
+                </div>
 
-                </li>
-
-                <li>
-                    <div class="proyectos__contenido">
-                        <h2 class="proyectos__titulo">Sudoku Game</h2>
-                        <img class="img__proyectos" height="350" width="350" src="imagenes/Captura-Sudoku.png">
-                        <p class="proyectos__descripcion">HTML5, CSS3 y JAVASCRIPT.</p>
+                <!-- 9 - Final Project (left) -->
+                <div class="tl-item tl-left">
+                    <div class="tl-side tl-side--media">
+                        <img class="tl-img" src="imagenes/graduacion.png" alt="Final Project">
                     </div>
-
-                    <div class="proyectos__enlace">
-                        <a href="https://github.com/sebitaelgordito/Sudoku-html-css-javascript"><img class="red" height="40" width="40" src="imagenes/logo-github.png" alt="logo github">
-                        </a>
-                        <a href="https://sudoku-sv.netlify.app"><img class="red" height="40" width="50" src="imagenes/icono-web.png" alt="logo web">
-                        </a>
+                    <div class="tl-connector"><div class="tl-dot"></div></div>
+                    <div class="tl-side tl-side--text">
+                        <div class="tl-card">
+                            <span class="tl-tag">Python · Power BI · ML · HTML5</span>
+                            <h2 class="tl-title">Final Project</h2>
+                            <p class="tl-desc">Henry bootcamp graduation project. Analysis of NY transportation data using ML models, Power BI dashboards and a fully deployed web application.</p>
+                            <div class="tl-links">
+                                <a href="https://github.com/programmingwithclaudio/MVP_ML_TransporteNY"><img class="tl-icon" height="36" width="36" src="imagenes/logo-github.png" alt="GitHub"></a>
+                                <a href="https://movi-plus.netlify.app"><img class="tl-icon" height="36" width="44" src="imagenes/icono-web.png" alt="Live site"></a>
+                            </div>
+                        </div>
                     </div>
+                </div>
 
-                </li>
+                <!-- 10 - Login Form (right) -->
+                <div class="tl-item tl-right">
+                    <div class="tl-side tl-side--text">
+                        <div class="tl-card">
+                            <span class="tl-tag">HTML5 · CSS3 · JavaScript</span>
+                            <h2 class="tl-title">Login Form</h2>
+                            <p class="tl-desc">Animated login form with client-side validation. Clean responsive UI with smooth CSS transitions and interactive JavaScript logic.</p>
+                            <div class="tl-links">
+                                <a href="https://github.com/sebitaelgordito/Formulario-login-html-css-javascript"><img class="tl-icon" height="36" width="36" src="imagenes/logo-github.png" alt="GitHub"></a>
+                                <a href="https://formulario-login-sv.netlify.app"><img class="tl-icon" height="36" width="44" src="imagenes/icono-web.png" alt="Live site"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tl-connector"><div class="tl-dot"></div></div>
+                    <div class="tl-side tl-side--media">
+                        <img class="tl-img" src="imagenes/Captura-Formulario-login.png" alt="Login Form">
+                    </div>
+                </div>
 
-            </ul>
+                <!-- 11 - Nike Ecommerce (left) -->
+                <div class="tl-item tl-left">
+                    <div class="tl-side tl-side--media">
+                        <img class="tl-img" src="imagenes/Captura-Nike-portada.png" alt="Nike Ecommerce">
+                    </div>
+                    <div class="tl-connector"><div class="tl-dot"></div></div>
+                    <div class="tl-side tl-side--text">
+                        <div class="tl-card">
+                            <span class="tl-tag">HTML5 · CSS3 · JavaScript</span>
+                            <h2 class="tl-title">Nike Ecommerce</h2>
+                            <p class="tl-desc">E-commerce concept page inspired by Nike. Product catalog with cart functionality, built entirely with vanilla JavaScript.</p>
+                            <div class="tl-links">
+                                <a href="https://github.com/sebitaelgordito/Pagina-de-nike-html-css-javascript"><img class="tl-icon" height="36" width="36" src="imagenes/logo-github.png" alt="GitHub"></a>
+                                <a href="https://pagina-noke-sv.netlify.app"><img class="tl-icon" height="36" width="44" src="imagenes/icono-web.png" alt="Live site"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 12 - Python App (right) -->
+                <div class="tl-item tl-right">
+                    <div class="tl-side tl-side--text">
+                        <div class="tl-card">
+                            <span class="tl-tag">Python</span>
+                            <h2 class="tl-title">Python App</h2>
+                            <p class="tl-desc">Desktop application developed during UTN studies. Data management system with a GUI-based interface built in Python.</p>
+                            <div class="tl-links">
+                                <a href="https://github.com/sebitaelgordito/Python"><img class="tl-icon" height="36" width="36" src="imagenes/logo-github.png" alt="GitHub"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tl-connector"><div class="tl-dot"></div></div>
+                    <div class="tl-side tl-side--media">
+                        <img class="tl-img" src="imagenes/Captura-App-python.png" alt="Python App">
+                    </div>
+                </div>
+
+            </div>
 
         </section>
 
