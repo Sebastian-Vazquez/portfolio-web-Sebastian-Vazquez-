@@ -174,31 +174,6 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 
-// === VISITOR COUNTER ===
-// To exclude your own visits, run this ONCE in your browser console:
-//   localStorage.setItem('sv_owner', '1')
-// To undo: localStorage.removeItem('sv_owner')
-(function () {
-    const el       = document.getElementById('visit-count');
-    if (!el) return;
-
-    const isOwner  = localStorage.getItem('sv_owner') === '1';
-    const NS       = 'sebasv';
-    const KEY      = 'portfolio-hits';
-    // counterapi.dev — free, no account needed, resets to 0 on first call
-    const base     = `https://api.counterapi.dev/v1/${NS}/${KEY}`;
-    const url      = isOwner ? base : `${base}/up`;
-
-    fetch(url)
-        .then(r => r.json())
-        .then(data => {
-            const n = data.count ?? data.value ?? '—';
-            el.textContent = typeof n === 'number' ? n.toLocaleString() : n;
-        })
-        .catch(() => { el.textContent = '—'; });
-})();
-
-
 // === TYPEWRITER EFFECT ===
 const carreraEl = document.querySelector('.carrera em') || document.querySelector('.carrera');
 if (carreraEl) {
