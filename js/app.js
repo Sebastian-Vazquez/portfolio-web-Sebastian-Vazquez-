@@ -1,4 +1,4 @@
-// === SMOKE / LIQUID NITROGEN BACKGROUND ===
+// === LIQUID NITROGEN SMOKE BACKGROUND ===
 const canvas = document.createElement('canvas');
 canvas.id = 'particle-canvas';
 document.body.prepend(canvas);
@@ -19,32 +19,19 @@ class SmokeParticle {
     constructor(init = false) { this.spawn(init); }
 
     spawn(init = false) {
-        // Spawn clustered at bottom; init spreads across full height
         this.x = Math.random() * W;
         this.y = init ? Math.random() * H : H + Math.random() * 60;
-
-        // Large, soft puffs
-        this.r       = Math.random() * 140 + 55;
+        this.r       = Math.random() * 119 + 47;
         this.growRate = Math.random() * 0.20 + 0.06;
-
-        // Slow upward drift with gentle horizontal sway
         this.vx = (Math.random() - 0.5) * 0.45;
         this.vy = -(Math.random() * 0.50 + 0.12);
-
-        // Organic wobble
         this.wFreq = Math.random() * 0.012 + 0.004;
         this.wAmp  = Math.random() * 1.4 + 0.5;
         this.wOff  = Math.random() * Math.PI * 2;
-
-        // Life
         this.life    = 0;
         this.maxLife = Math.random() * 550 + 260;
-
-        // Opacity — intentionally very low for subtlety
-        this.maxAlpha = Math.random() * 0.055 + 0.018;
-
-        // 85% cold blue-white, 15% warm orange ember
-        this.cold = Math.random() > 0.15;
+        this.maxAlpha = Math.random() * 0.18 + 0.08;
+        this.cold = true;
     }
 
     update() {
@@ -90,38 +77,25 @@ function initSmoke() {
 }
 initSmoke();
 
-// Dense floor mist that pools at the bottom — the "liquid nitrogen" layer
 function drawFloorMist() {
-    // Wide soft band
     const bandH = H * 0.42;
     const g1 = ctx.createLinearGradient(0, H - bandH, 0, H);
     g1.addColorStop(0,    'rgba(0,0,0,0)');
-    g1.addColorStop(0.50, 'rgba(155, 185, 235, 0.022)');
-    g1.addColorStop(1,    'rgba(175, 208, 252, 0.058)');
+    g1.addColorStop(0.50, 'rgba(155, 185, 235, 0.06)');
+    g1.addColorStop(1,    'rgba(175, 208, 252, 0.16)');
     ctx.fillStyle = g1;
     ctx.fillRect(0, H - bandH, W, bandH);
 
-    // Tight bright strip right at the floor
     const stripH = H * 0.10;
     const g2 = ctx.createLinearGradient(0, H - stripH, 0, H);
     g2.addColorStop(0, 'rgba(0,0,0,0)');
-    g2.addColorStop(1, 'rgba(190, 215, 255, 0.08)');
+    g2.addColorStop(1, 'rgba(190, 215, 255, 0.22)');
     ctx.fillStyle = g2;
     ctx.fillRect(0, H - stripH, W, stripH);
 }
 
-// Deep ambient vignette — keeps content readable
-function drawAmbient() {
-    const g = ctx.createRadialGradient(W * 0.5, H * 0.65, 0, W * 0.5, H * 0.65, W * 0.7);
-    g.addColorStop(0, 'rgba(12, 20, 45, 0.10)');
-    g.addColorStop(1, 'rgba(0,0,0,0)');
-    ctx.fillStyle = g;
-    ctx.fillRect(0, 0, W, H);
-}
-
 function animateParticles() {
     ctx.clearRect(0, 0, W, H);
-    drawAmbient();
     drawFloorMist();
     smokeParticles.forEach(s => { s.update(); s.draw(); });
     requestAnimationFrame(animateParticles);
@@ -134,19 +108,12 @@ const menu = document.querySelector(".menu");
 const openMenuBtn = document.querySelector(".open__menu");
 const closeMenuBtn = document.querySelector(".close__menu");
 
-function toggleMenu() {
-    menu.classList.toggle("menu--opened");
-}
-
+function toggleMenu() { menu.classList.toggle("menu--opened"); }
 openMenuBtn.addEventListener("click", toggleMenu);
 closeMenuBtn.addEventListener("click", toggleMenu);
 
 const nombreyapellido = document.querySelector(".nombre__apellido");
-
-function opacidadTitulo() {
-    nombreyapellido.classList.toggle("titulo--opaco");
-}
-
+function opacidadTitulo() { nombreyapellido.classList.toggle("titulo--opaco"); }
 openMenuBtn.addEventListener("click", opacidadTitulo);
 closeMenuBtn.addEventListener("click", opacidadTitulo);
 
@@ -158,20 +125,19 @@ const navObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             const id = entry.target.getAttribute("id");
-            const menuLink = document.querySelector(`.menu a[href="#${id}"]`);
+            const link = document.querySelector(`.menu a[href="#${id}"]`);
             document.querySelector(".menu a.selected")?.classList.remove("selected");
-            if (menuLink) menuLink.classList.add("selected");
+            if (link) link.classList.add("selected");
         }
     });
 }, { rootMargin: "-40% 0px -60% 0px" });
 
-menuLinks.forEach(menuLink => {
-    menuLink.addEventListener("click", () => {
+menuLinks.forEach(link => {
+    link.addEventListener("click", () => {
         menu.classList.remove("menu--opened");
         if (nombreyapellido.classList.contains("titulo--opaco")) opacidadTitulo();
     });
-    const hash = menuLink.getAttribute("href");
-    const target = document.querySelector(hash);
+    const target = document.querySelector(link.getAttribute("href"));
     if (target) navObserver.observe(target);
 });
 
@@ -215,10 +181,7 @@ if (carreraEl) {
     carreraEl.textContent = '';
     let i = 0;
     const type = () => {
-        if (i < original.length) {
-            carreraEl.textContent += original[i++];
-            setTimeout(type, 55);
-        }
+        if (i < original.length) { carreraEl.textContent += original[i++]; setTimeout(type, 55); }
     };
     setTimeout(type, 900);
 }
